@@ -11,13 +11,19 @@ let total = 0;
 let noches = 0;
 let diasVisitaGuiada = 0;
 let horasQuincho = 0;
-let diasRafting = 0;
+let horaRafting = 0;
 let servicioActual = "";
+
+if (confirm("Bienvenido a Parque Natural Kalfu, la entrada al parque tiene un valor de 8 USD")) {
+  total += entrada;
+  alert("Los servicios disponibles son: camping, cabaña, quincho, ");
+}
+else { servicioActual = "fin" };
+
 
 // Recorrer la lista de servicios
 while (servicioActual !== "fin") {
 
-  
   servicioActual = prompt("Ingrese el servicio (o 'fin' para terminar):").trim();
 
   if (servicioActual === "entrada") {
@@ -31,7 +37,7 @@ while (servicioActual !== "fin") {
   } else if (servicioActual === "quincho") {
     horasQuincho = parseInt(prompt("¿Cuántas horas desea usar el quincho?"));
     total += horasQuincho * quincho;
-  } else if (servicioActual === "visitaGuiada") {
+  } else if (servicioActual === "visita guiada") {
     diasVisitaGuiada = parseInt(prompt("¿Cuántos días desea la visita guiada?"));
     total += diasVisitaGuiada * visitaGuiada;
   } else if (servicioActual === "rafting") {
@@ -43,5 +49,4 @@ while (servicioActual !== "fin") {
 }
 
 // Mostrar el precio total
-console.log("El precio total a pagar es: $" + total);
-alert("El precio total a pagar es: $" + total);
+if (servicioActual = fin) {alert("El precio total a pagar es: $" + total);
