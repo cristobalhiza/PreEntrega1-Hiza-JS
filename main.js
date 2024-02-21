@@ -1,34 +1,32 @@
 // Lista de precios
 const entrada = 8;
 const camping = 15;
-const cabaña = 100;
+const cabaña = 80;
 const quincho = 2;
-const visitaGuiada = 25;
+const tourGuiado = 25;
 const rafting = 20;
 
 // Variables
 let total = 0;
 let noches = 0;
-let diasVisitaGuiada = 0;
+let horasTourGuiado = 0;
 let horasQuincho = 0;
 let horaRafting = 0;
 let servicioActual = "";
 
-if (confirm("Bienvenido a Parque Natural Kalfu, la entrada al parque tiene un valor de 8 USD")) {
+if (confirm("Bienvenido a Reserva Natural Kalfu, la entrada al parque tiene un valor de $8")) {
   total += entrada;
-  alert("Los servicios disponibles son: camping, cabaña, quincho, ");
+  alert("Los servicios disponibles son: camping, cabaña, quincho, tour guiado, rafting");
 }
-else { servicioActual = "fin" };
+else { servicioActual = "ok" };
 
 
 // Recorrer la lista de servicios
-while (servicioActual !== "fin") {
+while (servicioActual !== "ok") {
 
-  servicioActual = prompt("Ingrese el servicio (o 'fin' para terminar):").trim();
+  servicioActual = prompt("Ingrese el servicio que desee contratar (o 'Ok' para terminar):", "Ok").trim().toLowerCase();
 
-  if (servicioActual === "entrada") {
-    total += entrada;
-  } else if (servicioActual === "camping") {
+  if (servicioActual === "camping") {
     noches = parseInt(prompt("¿Cuántas noches desea acampar?"));
     total += noches * camping;
   } else if (servicioActual === "cabaña") {
@@ -37,16 +35,17 @@ while (servicioActual !== "fin") {
   } else if (servicioActual === "quincho") {
     horasQuincho = parseInt(prompt("¿Cuántas horas desea usar el quincho?"));
     total += horasQuincho * quincho;
-  } else if (servicioActual === "visita guiada") {
-    diasVisitaGuiada = parseInt(prompt("¿Cuántos días desea la visita guiada?"));
-    total += diasVisitaGuiada * visitaGuiada;
+  } else if (servicioActual === "tour guiado") {
+    horasTourGuiado = parseInt(prompt("¿Cuántas horas desea el tour guiado?"));
+    total += horasTourGuiado * tourGuiado;
   } else if (servicioActual === "rafting") {
     diasRafting = parseInt(prompt("¿Cuántos días desea realizar rafting?"));
     total += diasRafting * rafting;
-  } else if (servicioActual !== "fin") {
-    console.log("Servicio no válido. Intente nuevamente.");
+  } else if (servicioActual !== "ok") {
+    alert("Servicio no válido. Intente nuevamente.");
   }
 }
 
 // Mostrar el precio total
-if (servicioActual = fin) {alert("El precio total a pagar es: $" + total);
+if (servicioActual = "ok") { alert("El precio total a pagar es: $" + total + ", muchas gracias por su visita") }
+else { alert("Muchas gracias por su visita") }
