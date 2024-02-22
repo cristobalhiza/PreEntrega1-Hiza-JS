@@ -3,6 +3,10 @@
     padding: 0;
 }
 
+html {
+    font-size: 10px;
+}
+
 body {
     display: flex;
     flex-flow: row-reverse wrap;
