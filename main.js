@@ -1,7 +1,7 @@
 // Lista de precios
 const entrada = 8;
 const camping = 15;
-const cabaña = 80;
+const cabana = 80;
 const quincho = 4;
 const tourGuiado = 25;
 const rafting = 20;
@@ -31,7 +31,7 @@ while (servicioActual !== "ok") {
     total += noches * camping;
   } else if (servicioActual === "cabaña") {
     noches = parseInt(prompt("¿Cuántas noches desea alojarse en la cabaña?"));
-    total += noches * cabaña;
+    total += noches * cabana;
   } else if (servicioActual === "quincho") {
     horasQuincho = parseInt(prompt("¿Cuántas horas desea usar el quincho?"));
     total += horasQuincho * quincho;
